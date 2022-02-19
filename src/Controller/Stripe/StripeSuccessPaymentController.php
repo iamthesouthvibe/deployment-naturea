@@ -12,7 +12,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class StripeSuccessPaymentController extends AbstractController
 {
     /**
-     * @Route("/stripe-payment-success/{stripeSessionId}", name="stripe_payment_success")
+     * @Route("/stripe-payment-success/{StripeSessionId}", name="stripe_payment_success")
      */
     public function index(?Orders $order, CartServices $cartServices, EntityManagerInterface $manager): Response
     {
@@ -28,7 +28,7 @@ class StripeSuccessPaymentController extends AbstractController
             $cartServices->deleteCart();
             //envoi d'un email au client
         }
-        return $this->render('stripe/stripe_success_payment/index.html.twig', [
+        return $this->render('/stripe_success_payment/index.html.twig', [
             'controller_name' => 'StripeSuccessPaymentController',
             'order' => $order,
            

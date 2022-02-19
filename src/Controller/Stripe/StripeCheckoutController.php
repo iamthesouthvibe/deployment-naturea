@@ -38,7 +38,7 @@ class StripeCheckoutController extends AbstractController
         //dd($cart);
      
         $order = $orderServices->createOrder($cart);
-        Stripe::setApiKey('sk_test_51J077OJKhLQ2081pItEOc0mNywBnmiTwo9z9ewiqkKbswOtY3sPS7fr3gEYFLtebDC7yHRDlEvWQ5aqhFK9lCF3400KjjNZCfs');
+        Stripe::setApiKey($_ENV['key_test_stripe_secret']);
         
         /*$line_items = [];  //mis dans OrderService.php
         foreach (($cart['products']) as $dataProduct) {

@@ -49,22 +49,22 @@
                                    
                                         <tr>
                                             <td> {{ element.product.nameProduct }} <span class="product-qty">x {{ element.quantity }}</span></td>
-                                            <td> $ {{ element.product.price/100 }}</td>
+                                            <td> € {{ element.product.price/100 }}</td>
                                         </tr>
                                  {% endfor %}
                                 </tbody>
                                 <tfoot>
                                     <tr>
                                         <th>SousTotal HT</th>
-                                        <td class="product-subtotal"> ${{ cart.data.subTotalHT }}</td>
+                                        <td class="product-subtotal"> € {{ cart.data.subTotalHT }}</td>
                                     </tr>
                                     <tr>
                                         <th>Taxe</th>
-                                        <td class="product-subtotal"> ${{ cart.data.Taxe }}</td>
+                                        <td class="product-subtotal"> € {{ cart.data.Taxe }}</td>
                                     </tr>
                                     <tr>
                                         <th>Total</th>
-                                        <td class="product-subtotal"> ${{ cart.data.subTotalTTC }}</td>
+                                        <td class="product-subtotal"> € {{ cart.data.subTotalTTC }}</td>
                                     </tr>
                                 </tfoot>
 

@@ -93,6 +93,7 @@ class CheckoutController extends AbstractController
                 'transport' =>$transport,
                 'informations' =>$informations,
                 'reference' =>$reference,
+                'apiKeyPublic' => $_ENV['key_test_stripe_public'],
                 'checkout'=>$form->createView()
             ]);
         } else {

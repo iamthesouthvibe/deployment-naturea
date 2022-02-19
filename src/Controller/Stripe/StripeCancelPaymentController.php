@@ -10,7 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class StripeCancelPaymentController extends AbstractController
 {
     /**
-     * @Route("/stripe-payment-cancel/{stripeSessionId}", name="stripe_payment_cancel")
+     * @Route("/stripe-payment-cancel/{StripeSessionId}", name="stripe_payment_cancel")
      */
     public function index(?Orders $order): Response
     {

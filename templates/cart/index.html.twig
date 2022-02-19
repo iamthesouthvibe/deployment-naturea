@@ -33,7 +33,7 @@
                                         <input type="text" name="quantity" value="{{element.quantity}}" title="Qty" class="qty" size="4">
                                         <a href="{{ path('cartAdd', {'id':element.product.id})}}" type="button" value="+" class="plus"> + </a>
                                         </div></td>
-                                        <td class="product-subtotal" data-title="Total">${{ element.quantity * element.product.price/100 }}</td>
+                                        <td class="product-subtotal" data-title="Total">€ {{ element.quantity * element.product.price/100 }}</td>
                                         <td class="product-remove" data-title="Remove"><a href="{{ path('cartDeleteAll', {'id':element.product.id})}}"><i class="ti-close"></i></a></td>
                                     </tr>
                                 {% endfor %}
@@ -52,6 +52,7 @@
                                 </tr>
                             </tfoot>
                         </table>
+                         <p><a class="btn btn-fill-out" href="{{ path('accueil')}}">Poursuivre vos achats</a></p>
                       </div>
                   </div>
               </div>   
@@ -61,29 +62,30 @@
                     <div class="divider center_icon"><i class="ti-shopping-cart-full"></i></div>
                     <div class="medium_divider"></div>
                   </div>
-              </div>             
+              </div> 
+                       
               <div class="row">
                   <div class="col-md-6">
                   </div>
                   <div class="col-md-6">
                     <div class="border p-3 p-md-4">
                         <div class="heading_s1 mb-3">
-                            <h6>Cart Totals</h6>
+                            <h6>Panier Totaux</h6>
                         </div>
                         <div class="table-responsive">
                             <table class="table">
                                 <tbody>
                                     <tr>
-                                        <td class="cart_total_label">Cart Subtotal HT</td>
-                                        <td class="cart_total_amount">$ {{ cart.data.subTotalHT}}</td>
+                                        <td class="cart_total_label">Panier Sous total HT</td>
+                                        <td class="cart_total_amount">€ {{ cart.data.subTotalHT}}</td>
                                     </tr>
                                     <tr>
                                         <td class="cart_total_label">Taxe (20%) </td>
-                                        <td class="cart_total_amount">$ {{ cart.data.Taxe }}</td>
+                                        <td class="cart_total_amount">€ {{ cart.data.Taxe }}</td>
                                     </tr>
                                     <tr>
                                         <td class="cart_total_label">Total TTC</td>
-                                        <td class="cart_total_amount"><strong>$ {{ cart.data.subTotalTTC  }}</strong></td>
+                                        <td class="cart_total_amount"><strong>€ {{ cart.data.subTotalTTC  }}</strong></td>
                                     </tr>
                                 </tbody>
                             </table>
