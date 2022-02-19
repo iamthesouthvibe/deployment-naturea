@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+{% block title %} Naturéa Boutique en ligne {% endblock title %}
+
+{% block body %}
+{{ include("partials/title.html.twig", {'name':'Page non trouvée'}) }}
+
+<div class="section">
+   <div class="error_wrap">
+      <div class="container">
+         <div class="row align-items-center justify-content-center">
+               <div class="col-lg-6 col-md-10 order-lg-first">
+                  <div class="text-center">
+                    <div class="error_txt">404</div>
+                    <h5 class="mb-2 mb-sm-3">Oups ! La page que vous demandez n'est pas trouvé !</h5>
+                    <p>L'url de la page que vous avez renseignée, est modifiée, supprimée ou n'a jamais existé.</p>
+
+                    <a href="{{ path('accueil') }}" class="btn btn-fill-out">Retour page accueil</a>
+
+                  </div>
+               </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+{% endblock %}
